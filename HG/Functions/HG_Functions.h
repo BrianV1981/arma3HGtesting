@@ -50,6 +50,7 @@ class HG
 		class keyDown {};
 		class killed {};
 		class respawn {};
+		class take {};
 	};
 	
 	class Garage
@@ -82,6 +83,7 @@ class HG
 		class addOrSubCash {};
 		class addOrSubKills {};
 		class addOrSubXP {};
+		class arrayCount {};
 	    class currencyToText {};
 		class emptyVehicle {};
 		class getConfig {};
@@ -90,6 +92,7 @@ class HG
 		class isNumeric {};
 		class lockOrUnlock {};
 		class markers {};
+		class moneyItem {};
 		class nearbyATM {};
 		class parseGear {};
 		class paycheck {};
@@ -146,6 +149,16 @@ class HG
 		class refreshTrader {};
 		class traderBtns {};
 		class traderTreeChanged {};
+	};
+	
+	class Units
+	{
+		file = "HG\Functions\Client\Units";
+		class dialogOnLoadUnits {};
+		class unitsBtns {};
+		class unitsComboChanged {};
+		class unitsRefresh {};
+		class unitsTreeChanged {};
 	};
 	
 	class VehiclesShop

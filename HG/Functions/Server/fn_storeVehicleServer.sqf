@@ -49,8 +49,8 @@ if(_mode isEqualTo 1) then
     {
 	    [_vehicle] call HG_fnc_getInventory;
     };
-
-	deleteVehicle _vehicle;
+	
+    deleteVehicle _vehicle;
 	
 	(localize "STR_HG_GRG_VEHICLE_STORED") remoteExecCall ["hint",(owner _unit),false];
 };

@@ -44,6 +44,7 @@ private "_compile";
 } forEach 
 [
 	["HG_fnc_activeReset","HG\Functions\Server\fn_activeReset.sqf"],
+	["HG_fnc_cleanup","HG\Functions\Server\fn_cleanup.sqf"],
 	["HG_fnc_clientToServer","HG\Functions\Server\fn_clientToServer.sqf"],
 	["HG_fnc_deleteVehicle","HG\Functions\Server\fn_deleteVehicle.sqf"],
 	["HG_fnc_disconnect","HG\Functions\Server\fn_disconnect.sqf"],
@@ -85,3 +86,5 @@ if((getNumber(getMissionConfig "CfgClient" >> "enableWhitelist")) isEqualTo 1 AN
 };
 
 "HG_CLIENT" addPublicVariableEventHandler {[(_this select 1)] call HG_fnc_clientToServer;};
+
+HG_CLEANUP_THREAD = [] spawn HG_fnc_cleanup;
